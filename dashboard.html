@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <title>Gym Membership System</title>
+  <style>
+    * {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="h-screen flex flex-col bg-slate-100 text-slate-700 overflow-hidden">
+
+  <!-- Header -->
+  <header class="text-center p-6 bg-indigo-600 text-white shadow-md">
+    <h1 class="text-3xl font-bold tracking-wide">GYM Membership System</h1>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="bg-white border-b border-slate-300 shadow-sm px-6 py-3">
+    <ul class="flex gap-6 justify-end">
+      <li><a href="dashboard.html" class="hover:text-indigo-600 transition">Dashboard</a></li>
+      <li><a href="#" class="hover:text-indigo-600 transition">News Feed</a></li>
+      <li><a href="memberInfo.html" class="hover:text-indigo-600 transition">Members Info</a></li>
+      <li><a href="memberLog.html" class="hover:text-indigo-600 transition">Members Logs</a></li>
+      <li><a href="#" class="hover:text-indigo-600 transition">Settings</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main layout: sidebar + content -->
+  <div class="flex flex-1 overflow-hidden">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-slate-800 text-white p-6 overflow-y-auto sticky top-0 h-screen">
+      <div class="border border-slate-600 rounded-lg p-4 bg-slate-700">
+        <h3 class="text-lg font-semibold mb-4 text-center">📅 Select Period</h3>
+        <div class="flex items-center justify-between mb-3">
+          <label for="start" class="text-sm font-medium mr-2">Start:</label>
+          <input type="date" id="start"
+            class="text-slate-900 text-sm rounded p-1 w-[60%] outline-none" />
+        </div>
+        <div class="flex items-center justify-between">
+          <label for="end" class="text-sm font-medium mr-2">End:</label>
+          <input type="date" id="end"
+            class="text-slate-900 text-sm rounded p-1 w-[60%] outline-none" />
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="flex-1 overflow-y-auto p-4 bg-slate-100">
+      <header class="text-center bg-white p-4 shadow rounded-md mb-6">
+        <h1 class="uppercase font-semibold text-slate-700 text-lg tracking-wide">
+          For the period <span class="text-indigo-600">{start date}</span> to
+          <span class="text-indigo-600">{end date}</span>
+        </h1>
+      </header>
+
+      <!-- Stats Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-white shadow-md p-4 rounded-lg flex flex-col items-center">
+          <i class="bx bxs-user-check text-3xl text-indigo-600 mb-2"></i>
+          <p class="text-sm text-slate-500">Total Active Members</p>
+          <p class="text-xl font-semibold text-slate-800">200</p>
+        </div>
+        <div class="bg-white shadow-md p-4 rounded-lg flex flex-col items-center">
+          <i class="bx bxs-user-plus text-3xl text-green-600 mb-2"></i>
+          <p class="text-sm text-slate-500">Total New Members</p>
+          <p class="text-xl font-semibold text-slate-800">200</p>
+        </div>
+        <div class="bg-white shadow-md p-4 rounded-lg flex flex-col items-center">
+          <i class="bx bxs-user-detail text-3xl text-yellow-500 mb-2"></i>
+          <p class="text-sm text-slate-500">For Renewal Members</p>
+          <p class="text-xl font-semibold text-slate-800">200</p>
+        </div>
+        <div class="bg-white shadow-md p-4 rounded-lg flex flex-col items-center">
+          <i class="bx bxs-user-minus text-3xl text-rose-500 mb-2"></i>
+          <p class="text-sm text-slate-500">Old Members</p>
+          <p class="text-xl font-semibold text-slate-800">200</p>
+        </div>
+      </div>
+
+      <!-- Chart -->
+      <div class="bg-white p-4 rounded-lg shadow mt-8 mx-auto mb-6">
+        <canvas id="memberChart" width="500" height="250"></canvas>
+      </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="bg-white shadow-md p-4 rounded-lg flex flex-col items-center">
+                <i class="bx bx-dollar-circle text-3xl text-indigo-600 mb-2"></i>
+                <p class="text-sm text-slate-500">Total Sales</p>
+                <p class="text-xl font-semibold text-slate-800">200</p>
+            </div>
+
+            <div class="bg-white shadow-md p-4 rounded-lg flex flex-col items-center">
+                <i class="bx bx-wrench text-3xl text-green-600 mb-2"></i>
+                <p class="text-sm text-slate-500">Total Cost of Service</p>
+                <p class="text-xl font-semibold text-slate-800">200</p>
+            </div>
+
+            <div class="bg-white shadow-md p-4 rounded-lg flex flex-col items-center">
+                <i class="bx bx-cart text-3xl text-yellow-500 mb-2"></i>
+                <p class="text-sm text-slate-500">Total Expenses</p>
+                <p class="text-xl font-semibold text-slate-800">200</p>
+            </div>
+
+            <div class="bg-white shadow-md p-4 rounded-lg flex flex-col items-center">
+                <i class="bx bx-trending-up text-3xl text-rose-500 mb-2"></i>
+                <p class="text-sm text-slate-500">Net Profit</p>
+                <p class="text-xl font-semibold text-slate-800">200</p>
+            </div>
+    </div>
+
+    <div class="bg-white p-4 rounded-lg shadow mt-8 mx-auto mb-6">
+        <canvas id="salesChart" width="500" height="250"></canvas>
+      </div>
+
+
+
+      
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+  const ctx = document.getElementById('memberChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: [
+        'January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December'
+      ],
+      datasets: [
+        {
+          label: 'New Members',
+          data: [30, 25, 40, 35, 45, 50, 55, 60, 40, 35, 30, 50],
+          backgroundColor: '#6366f1'
+        },
+        {
+          label: 'Active Members',
+          data: [100, 105, 110, 95, 98, 102, 108, 110, 106, 104, 99, 101],
+          backgroundColor: '#10b981'
+        },
+        {
+          label: 'For Renewals',
+          data: [10, 12, 15, 9, 11, 14, 13, 17, 11, 10, 12, 15],
+          backgroundColor: '#f59e0b'
+        },
+        {
+          label: 'Old Members',
+          data: [60, 55, 50, 52, 49, 47, 45, 49, 43, 44, 42, 41],
+          backgroundColor: '#ef4444'
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          display: true,
+          position: 'bottom'
+        },
+        title: {
+          display: true,
+          text: 'Monthly Membership Breakdown',
+          font: {
+            size: 18,
+            family: 'Poppins'
+          }
+        }
+      },
+      scales: {
+        x: {
+          stacked: false,
+          title: {
+            display: true,
+            text: 'Month',
+            font: { family: 'Poppins', weight: '600' }
+          }
+        },
+        y: {
+          stacked: false,
+          title: {
+            display: true,
+            text: 'Number of Members',
+            font: { family: 'Poppins', weight: '600' }
+          }
+        }
+      }
+    }
+  });
+
+
+    const salesCtx = document.getElementById('salesChart').getContext('2d');
+
+  new Chart(salesCtx, {
+    type: 'bar',
+    data: {
+      labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+      datasets: [
+        {
+          label: 'Total Sales',
+          data: [2000, 2500, 2300, 2800, 2600, 3000],
+          backgroundColor: '#6366f1'
+        },
+        {
+          label: 'Cost of Service',
+          data: [800, 900, 850, 950, 900, 1000],
+          backgroundColor: '#10b981'
+        },
+        {
+          label: 'Total Expenses',
+          data: [500, 700, 600, 750, 650, 800],
+          backgroundColor: '#f59e0b'
+        },
+        {
+          label: 'Net Profit',
+          data: [700, 900, 850, 1100, 1050, 1200],
+          backgroundColor: '#ef4444'
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'bottom',
+          labels: {
+            font: { family: 'Poppins' }
+          }
+        },
+        title: {
+          display: true,
+          text: 'Monthly Financial Overview',
+          font: { size: 18, family: 'Poppins' }
+        }
+      },
+      scales: {
+        x: {
+          title: {
+            display: true,
+            text: 'Month',
+            font: { family: 'Poppins', weight: '600' }
+          }
+        },
+        y: {
+          beginAtZero: true,
+          title: {
+            display: true,
+            text: 'Amount ($)',
+            font: { family: 'Poppins', weight: '600' }
+          }
+        }
+      }
+    }
+  });
+</script>
+
+</body>
+
+</html>
