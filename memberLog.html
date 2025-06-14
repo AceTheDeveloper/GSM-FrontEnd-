@@ -1,136 +1,74 @@
-<!DOCTYPE html>
-<html lang="en" class="h-full">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-  <!-- Poppins Font CDN -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <title>Gym Membership System</title>
-  <style>
-    * {
-      font-family: 'Poppins', sans-serif;
-    }
-  </style>
-</head>
-
-<body class="h-screen flex flex-col bg-slate-100 text-slate-700 overflow-hidden">
+<main class="flex-1 overflow-y-auto p-6 bg-gradient-to-br from-slate-100 via-slate-200 to-slate-100 min-h-screen">
 
   <!-- Header -->
-  <header class="text-center p-6 bg-yellow-500 text-black shadow-md">
-    <h1 class="text-3xl font-bold tracking-wide">AJ Fitness Membership System</h1>
-  </header>
-
-  <!-- Navigation -->
-  <nav class="bg-gray-100 border-b border-gray-300 shadow-sm px-6 py-3">
-    <ul class="flex gap-6 justify-end text-black">
-      <li><a href="index.html" class="hover:text-yellow-600 transition">Dashboard</a></li>
-      <li><a href="#" class="hover:text-yellow-600 transition">News Feed</a></li>
-      <li><a href="memberInfo.html" class="hover:text-yellow-600 transition">Members Info</a></li>
-      <li><a href="memberLog.html" class="hover:text-yellow-600 transition">Members Logs</a></li>
-      <li><a href="#" class="hover:text-yellow-600 transition">Settings</a></li>
-    </ul>
-  </nav>
-
-  <!-- Main layout: sidebar + content -->
-  <div class="flex flex-1 overflow-hidden">
-
-    <!-- Sidebar -->
-    <aside class="w-64 bg-black text-white p-6 overflow-y-auto sticky top-0 h-screen">
-      <div class="border border-gray-700 rounded-lg p-4 bg-gray-800">
-        <h3 class="text-lg font-semibold mb-4 text-center">📅 Select Period</h3>
-        <div class="flex items-center justify-between mb-3">
-          <label for="start" class="text-sm font-medium mr-2">Start:</label>
-          <input type="date" id="start" class="text-slate-900 text-sm rounded p-1 w-[60%] outline-none" />
-        </div>
-        <div class="flex items-center justify-between">
-          <label for="end" class="text-sm font-medium mr-2">End:</label>
-          <input type="date" id="end" class="text-slate-900 text-sm rounded p-1 w-[60%] outline-none" />
-        </div>
-      </div>
-    </aside>
-
-    <!-- Main content -->
-    <main class="flex-1 overflow-y-auto p-4 bg-slate-100">
-      <header class="text-center bg-white p-4 shadow rounded-md mb-6">
-        <h1 class="uppercase font-semibold text-slate-700 text-lg tracking-wide">
-          Members Logs
-        </h1>
-      </header>
-
-      <div class="bg-white p-6 rounded-lg shadow">
-        <!-- Clock Display -->
-        <div class="flex justify-center mb-6">
-          <h2 class="text-4xl font-bold text-indigo-600" id="clock">12:42</h2>
-        </div>
-
-        <!-- Input Form -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-          <div>
-            <label class="block text-sm text-slate-600 mb-1">Customer ID</label>
-            <input type="text" placeholder="Enter ID"
-              class="w-full border border-slate-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400" />
-          </div>
-          <div>
-            <label class="block text-sm text-slate-600 mb-1">Customer Name</label>
-            <input type="text" placeholder="Enter Name"
-              class="w-full border border-slate-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400" />
-          </div>
-        </div>
-
-        <!-- Buttons -->
-        <div class="flex gap-4 mb-6">
-          <button class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">Time In</button>
-          <button class="bg-rose-500 text-white px-4 py-2 rounded hover:bg-rose-600 transition">Time Out</button>
-        </div>
-
-        <!-- Log Header & Link -->
-        <div class="flex justify-between items-center mb-4">
-          <h3 class="text-slate-700 font-semibold">Today's Log</h3>
-          <a href="#" class="text-indigo-500 hover:underline text-sm">View History</a>
-        </div>
-
-        <hr class="mb-4">
-
-        <!-- Logs Table -->
-        <div class="overflow-x-auto">
-          <table class="min-w-full text-sm text-slate-700 border border-slate-200 rounded">
-            <thead class="bg-slate-100 text-left">
-              <tr>
-                <th class="px-4 py-3">Customer ID</th>
-                <th class="px-4 py-3">Customer Name</th>
-                <th class="px-4 py-3">Time In</th>
-                <th class="px-4 py-3">Time Out</th>
-                <th class="px-4 py-3">Membership Plan</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-slate-100">
-              <tr class="hover:bg-slate-50">
-                <td class="px-4 py-2">001</td>
-                <td class="px-4 py-2">John Doe</td>
-                <td class="px-4 py-2">08:15 AM</td>
-                <td class="px-4 py-2">10:00 AM</td>
-                <td class="px-4 py-2">Monthly</td>
-              </tr>
-              <tr class="hover:bg-slate-50">
-                <td class="px-4 py-2">002</td>
-                <td class="px-4 py-2">Maria Reyes</td>
-                <td class="px-4 py-2">09:00 AM</td>
-                <td class="px-4 py-2">11:30 AM</td>
-                <td class="px-4 py-2">Annual</td>
-              </tr>
-              <!-- Add more logs here -->
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </main>
-
+  <div class="bg-indigo-600 text-white text-center text-xl font-bold py-3 rounded-lg shadow-md tracking-wide">
+    Member Logs
   </div>
 
-</body>
+  <!-- Card -->
+  <div class="bg-white mt-8 rounded-2xl shadow-xl px-8 py-6 max-w-2xl mx-auto space-y-5 border border-slate-200">
+    <div class="text-center text-lg font-semibold bg-gradient-to-r from-indigo-100 to-violet-100 text-indigo-700 py-2 rounded-full shadow-sm">
+      {Current Date & Time}
+    </div>
 
-</html>
+    <div class="space-y-3">
+      <input 
+        type="text" 
+        placeholder="Customer ID" 
+        class="w-full px-4 py-3 bg-slate-100 text-gray-700 rounded-md border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+      />
+      <input 
+        type="text" 
+        placeholder="Customer Name" 
+        class="w-full px-4 py-3 bg-slate-100 text-gray-700 rounded-md border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+      />
+    </div>
+
+    <div class="flex justify-between pt-3">
+      <button class="w-[48%] bg-emerald-500 hover:bg-emerald-600 text-white font-semibold py-2 rounded-md transition duration-300 shadow">
+        Time In
+      </button>
+      <button class="w-[48%] bg-rose-500 hover:bg-rose-600 text-white font-semibold py-2 rounded-md transition duration-300 shadow">
+        Time Out
+      </button>
+    </div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="flex justify-between items-center mt-10 border-b-2 border-slate-300 pb-1 max-w-2xl mx-auto">
+    <h2 class="text-base font-semibold text-gray-700">Today’s Logs</h2>
+    <a href="#" class="text-sm text-indigo-500 hover:underline transition">View History</a>
+  </div>
+
+  <!-- Table -->
+  <div class="mt-4 overflow-x-auto max-w-5xl mx-auto">
+    <table class="min-w-full border-collapse text-sm shadow rounded overflow-hidden">
+      <thead>
+        <tr class="bg-indigo-700 text-white">
+          <th class="px-4 py-3 text-left font-semibold">Customer ID</th>
+          <th class="px-4 py-3 text-left font-semibold">Customer Name</th>
+          <th class="px-4 py-3 text-left font-semibold">Time In</th>
+          <th class="px-4 py-3 text-left font-semibold">Time Out</th>
+          <th class="px-4 py-3 text-left font-semibold">Membership Promo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-slate-100 text-slate-700">
+          <td class="px-4 py-3">C-10001</td>
+          <td class="px-4 py-3">John Doe</td>
+          <td class="px-4 py-3">6/8/2025 6:00PM</td>
+          <td class="px-4 py-3">--</td>
+          <td class="px-4 py-3">1 YR PLAN</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</main>
+
+
+
+    <script>
+  $(document).ready(function () {
+    $('#memberTable').DataTable();
+  });
+</script>

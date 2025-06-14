@@ -1,0 +1,135 @@
+<script>
+  function loadPage(pageName) {
+  google.script.run.withSuccessHandler(function(content) {
+    document.getElementById("content").innerHTML = content;
+
+    if (pageName === 'dashboard') {
+      renderDashboardCharts();
+    }
+
+  }).includePage(pageName);
+}
+
+  function renderDashboardCharts() {
+    const ctx = document.getElementById('memberChart')?.getContext('2d');
+    if (!ctx) return;
+
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June',
+                 'July', 'August', 'September', 'October', 'November', 'December'],
+        datasets: [
+          {
+            label: 'New Members',
+            data: [30, 25, 40, 35, 45, 50, 55, 60, 40, 35, 30, 50],
+            backgroundColor: '#6366f1'
+          },
+          {
+            label: 'Active Members',
+            data: [100, 105, 110, 95, 98, 102, 108, 110, 106, 104, 99, 101],
+            backgroundColor: '#10b981'
+          },
+          {
+            label: 'For Renewals',
+            data: [10, 12, 15, 9, 11, 14, 13, 17, 11, 10, 12, 15],
+            backgroundColor: '#f59e0b'
+          },
+          {
+            label: 'Old Members',
+            data: [60, 55, 50, 52, 49, 47, 45, 49, 43, 44, 42, 41],
+            backgroundColor: '#ef4444'
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: true, position: 'bottom' },
+          title: {
+            display: true,
+            text: 'Monthly Membership Breakdown',
+            font: { size: 18, family: 'Poppins' }
+          }
+        },
+        scales: {
+          x: {
+            title: {
+              display: true,
+              text: 'Month',
+              font: { family: 'Poppins', weight: '600' }
+            }
+          },
+          y: {
+            title: {
+              display: true,
+              text: 'Number of Members',
+              font: { family: 'Poppins', weight: '600' }
+            }
+          }
+        }
+      }
+    });
+
+    const salesCtx = document.getElementById('salesChart')?.getContext('2d');
+    if (!salesCtx) return;
+
+    new Chart(salesCtx, {
+      type: 'bar',
+      data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+        datasets: [
+          {
+            label: 'Total Sales',
+            data: [2000, 2500, 2300, 2800, 2600, 3000],
+            backgroundColor: '#6366f1'
+          },
+          {
+            label: 'Cost of Service',
+            data: [800, 900, 850, 950, 900, 1000],
+            backgroundColor: '#10b981'
+          },
+          {
+            label: 'Total Expenses',
+            data: [500, 700, 600, 750, 650, 800],
+            backgroundColor: '#f59e0b'
+          },
+          {
+            label: 'Net Profit',
+            data: [700, 900, 850, 1100, 1050, 1200],
+            backgroundColor: '#ef4444'
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: 'bottom' },
+          title: {
+            display: true,
+            text: 'Monthly Financial Overview',
+            font: { size: 18, family: 'Poppins' }
+          }
+        },
+        scales: {
+          x: {
+            title: {
+              display: true,
+              text: 'Month',
+              font: { family: 'Poppins', weight: '600' }
+            }
+          },
+          y: {
+            beginAtZero: true,
+            title: {
+              display: true,
+              text: 'Amount ($)',
+              font: { family: 'Poppins', weight: '600' }
+            }
+          }
+        }
+      }
+    });
+  }
+
+</script>

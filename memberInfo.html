@@ -1,143 +1,436 @@
-<!DOCTYPE html>
-<html lang="en" class="h-full">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <title>Gym Membership System</title>
-  <style>
-    * {
-      font-family: 'Poppins', sans-serif;
-    }
-  </style>
-</head>
-
-<body class="h-screen flex flex-col bg-slate-100 text-slate-700 overflow-hidden">
-
-  <!-- Header -->
-  <header class="text-center p-6 bg-yellow-500 text-black shadow-md">
-    <h1 class="text-3xl font-bold tracking-wide">AJ Fitness Membership System</h1>
+<!-- Main content -->
+<main class="flex-1 overflow-y-auto p-4 bg-slate-100">
+  <header class="text-center bg-white p-4 shadow rounded-md mb-6">
+    <h1 class="uppercase font-semibold text-slate-700 text-lg tracking-wide">
+      Members Information Database
+    </h1>
   </header>
 
-  <!-- Navigation -->
-  <nav class="bg-gray-100 border-b border-gray-300 shadow-sm px-6 py-3">
-    <ul class="flex gap-6 justify-end text-black">
-      <li><a href="index.html" class="hover:text-yellow-600 transition">Dashboard</a></li>
-      <li><a href="#" class="hover:text-yellow-600 transition">News Feed</a></li>
-      <li><a href="memberInfo.html" class="hover:text-yellow-600 transition">Members Info</a></li>
-      <li><a href="memberLog.html" class="hover:text-yellow-600 transition">Members Logs</a></li>
-      <li><a href="#" class="hover:text-yellow-600 transition">Settings</a></li>
-    </ul>
-  </nav>
+  <!-- Stats Grid -->
 
-  <!-- Main layout: sidebar + content -->
-  <div class="flex flex-1 overflow-hidden">
+  <div class="bg-white rounded-lg shadow overflow-x-auto">
+    <div class="bg-white rounded-lg shadow overflow-x-auto">
+      <div class="bg-white overflow-x-auto">
+        <div class="flex items-center justify-between p-4">
+          <p class="small font-semibold text-slate-700 text-base">Member's List</p>
 
-    <!-- Sidebar -->
-    <aside class="w-64 bg-black text-white p-6 overflow-y-auto sticky top-0 h-screen">
-      <div class="border border-gray-700 rounded-lg p-4 bg-gray-800">
-        <h3 class="text-lg font-semibold mb-4 text-center">📅 Select Period</h3>
-        <div class="flex items-center justify-between mb-3">
-          <label for="start" class="text-sm font-medium mr-2">Start:</label>
-          <input type="date" id="start" class="text-slate-900 text-sm rounded p-1 w-[60%] outline-none" />
-        </div>
-        <div class="flex items-center justify-between">
-          <label for="end" class="text-sm font-medium mr-2">End:</label>
-          <input type="date" id="end" class="text-slate-900 text-sm rounded p-1 w-[60%] outline-none" />
-        </div>
-      </div>
-    </aside>
-
-    <!-- Main content -->
-    <main class="flex-1 overflow-y-auto p-4 bg-slate-100">
-      <header class="text-center bg-white p-4 shadow rounded-md mb-6">
-        <h1 class="uppercase font-semibold text-slate-700 text-lg tracking-wide">
-          Members Information Database
-        </h1>
-      </header>
-
-      <!-- Stats Grid -->
-
-      <div class="bg-white rounded-lg shadow overflow-x-auto">
-        <div class="bg-white rounded-lg shadow overflow-x-auto">
-          <table class="min-w-full divide-y divide-slate-200 text-sm text-slate-700">
-            <thead class="bg-slate-100 sticky top-0 z-10">
-              <tr>
-                <th class="px-4 py-3 text-left font-semibold">Client Name</th>
-                <th class="px-4 py-3 text-left font-semibold">Address</th>
-                <th class="px-4 py-3 text-left font-semibold">Birthday</th>
-                <th class="px-4 py-3 text-left font-semibold">Phone</th>
-                <th class="px-4 py-3 text-left font-semibold">Email</th>
-                <th class="px-4 py-3 text-left font-semibold">Date Joined</th>
-                <th class="px-4 py-3 text-left font-semibold">Subscription Expiration</th>
-                <th class="px-4 py-3 text-left font-semibold">Membership Promo</th>
-                <th class="px-4 py-3 text-left font-semibold">Membership Status</th>
-                <th class="px-4 py-3 text-left font-semibold">Initial Weight</th>
-                <th class="px-4 py-3 text-left font-semibold">Today's Weight</th>
-                <th class="px-4 py-3 text-left font-semibold">Weight Change</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-slate-100">
-              <tr class="hover:bg-slate-50 transition">
-                <td class="px-4 py-3">John Doe</td>
-                <td class="px-4 py-3">123 Elm Street, Manila</td>
-                <td class="px-4 py-3">1990-05-15</td>
-                <td class="px-4 py-3">09171234567</td>
-                <td class="px-4 py-3">john.doe@example.com</td>
-                <td class="px-4 py-3">2024-01-10</td>
-                <td class="px-4 py-3">2025-01-10</td>
-                <td class="px-4 py-3">New Year Promo</td>
-                <td class="px-4 py-3 text-green-600 font-medium">Active</td>
-                <td class="px-4 py-3">82 kg</td>
-                <td class="px-4 py-3">76 kg</td>
-                <td class="px-4 py-3 text-emerald-600 font-semibold">-6 kg</td>
-              </tr>
-
-              <tr class="hover:bg-slate-50 transition">
-                <td class="px-4 py-3">Maria Reyes</td>
-                <td class="px-4 py-3">456 Mabini St., Quezon City</td>
-                <td class="px-4 py-3">1987-08-20</td>
-                <td class="px-4 py-3">09987654321</td>
-                <td class="px-4 py-3">maria.reyes@gmail.com</td>
-                <td class="px-4 py-3">2023-09-05</td>
-                <td class="px-4 py-3">2024-09-05</td>
-                <td class="px-4 py-3">Anniversary Deal</td>
-                <td class="px-4 py-3 text-yellow-500 font-medium">Expiring Soon</td>
-                <td class="px-4 py-3">70 kg</td>
-                <td class="px-4 py-3">71 kg</td>
-                <td class="px-4 py-3 text-red-500 font-semibold">+1 kg</td>
-              </tr>
-
-              <tr class="hover:bg-slate-50 transition">
-                <td class="px-4 py-3">Carlos Tan</td>
-                <td class="px-4 py-3">789 Rizal Ave., Pasig</td>
-                <td class="px-4 py-3">1995-03-12</td>
-                <td class="px-4 py-3">09229887766</td>
-                <td class="px-4 py-3">carlos.tan@yahoo.com</td>
-                <td class="px-4 py-3">2024-03-01</td>
-                <td class="px-4 py-3">2024-06-01</td>
-                <td class="px-4 py-3">Summer Fit</td>
-                <td class="px-4 py-3 text-red-600 font-medium">Expired</td>
-                <td class="px-4 py-3">90 kg</td>
-                <td class="px-4 py-3">90 kg</td>
-                <td class="px-4 py-3 text-gray-500 font-semibold">0 kg</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="relative ml-auto w-full max-w-xs">
+            <input type="text" id="customSearch" placeholder="Search members..."
+              class="pl-10 pr-4 py-2 rounded-md border border-slate-300 bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 w-full" />
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <svg class="h-5 w-5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1010.5 18.5a7.5 7.5 0 006.15-3.85z" />
+              </svg>
+            </div>
+          </div>
         </div>
 
       </div>
+      <table class="min-w-full divide-y divide-slate-200 text-sm text-slate-700" id="memberTable">
+        <thead class="bg-slate-100 sticky top-0 z-10">
+          <tr>
+            <th class="px-4 py-3 text-left font-semibold">Client Name</th>
+            <th class="px-4 py-3 text-left font-semibold">Address</th>
+            <th class="px-4 py-3 text-left font-semibold">Birthday</th>
+            <th class="px-4 py-3 text-left font-semibold">Phone</th>
+            <th class="px-4 py-3 text-left font-semibold">Email</th>
+            <th class="px-4 py-3 text-left font-semibold">Date Joined</th>
+            <th class="px-4 py-3 text-left font-semibold">Subscription Expiration</th>
+            <th class="px-4 py-3 text-left font-semibold">Membership Promo</th>
+            <th class="px-4 py-3 text-left font-semibold">Membership Status</th>
+            <th class="px-4 py-3 text-left font-semibold">Initial Weight</th>
+            <th class="px-4 py-3 text-left font-semibold">Today's Weight</th>
+            <th class="px-4 py-3 text-left font-semibold">Weight Change</th>
+            <th class="px-4 py-3 text-left font-semibold">Action</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="hover:bg-slate-50 transition cursor-pointer" onclick="toggleModal('myModal')">
+            <td class="px-4 py-3">John Doe</td>
+            <td class="px-4 py-3">123 Elm Street, Manila</td>
+            <td class="px-4 py-3">1990-05-15</td>
+            <td class="px-4 py-3">09171234567</td>
+            <td class="px-4 py-3">john.doe@example.com</td>
+            <td class="px-4 py-3">2024-01-10</td>
+            <td class="px-4 py-3">2025-01-10</td>
+            <td class="px-4 py-3">New Year Promo</td>
+            <td class="px-4 py-3 text-green-600 font-medium">Active</td>
+            <td class="px-4 py-3">82 kg</td>
+            <td class="px-4 py-3">76 kg</td>
+            <td class="px-4 py-3 text-emerald-600 font-semibold">-6 kg</td>
+            <td class="flex items-center justify-center gap-4">
+              <!-- Send Renewal Reminder -->
+              <button
+                class="bg-yellow-500 hover:bg-yellow-600 text-white p-2 rounded-lg shadow transition duration-200 mt-3 w-[35px] h-[35px]"
+                title="Send Renewal Reminder">
+                <i class='bx bx-bell'></i>
+              </button>
+
+              <!-- Send Bday Greeting -->
+              <button
+                class="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-lg shadow transition duration-200 mt-3 w-[35px] h-[35px]"
+                title="Send Birthday Greeting">
+                <i class='bx bx-gift'></i>
+              </button>
+
+              <!-- Extra Action (optional) -->
+              <button
+                class="bg-gray-500 hover:bg-gray-600 text-white p-2 rounded-lg shadow transition duration-200 mt-3 w-[35px] h-[35px]"
+                title="Other Action" onclick="loadPage('memberProfile')">
+                <i class='bx bx-dots-horizontal-rounded'></i>
+              </button>
+            </td>
 
 
+          </tr>
 
+          <tr class="hover:bg-slate-50 transition">
+            <td class="px-4 py-3">Maria Reyes</td>
+            <td class="px-4 py-3">456 Mabini St., Quezon City</td>
+            <td class="px-4 py-3">1987-08-20</td>
+            <td class="px-4 py-3">09987654321</td>
+            <td class="px-4 py-3">maria.reyes@gmail.com</td>
+            <td class="px-4 py-3">2023-09-05</td>
+            <td class="px-4 py-3">2024-09-05</td>
+            <td class="px-4 py-3">Anniversary Deal</td>
+            <td class="px-4 py-3 text-yellow-500 font-medium">Expiring Soon</td>
+            <td class="px-4 py-3">70 kg</td>
+            <td class="px-4 py-3">71 kg</td>
+            <td class="px-4 py-3 text-red-500 font-semibold">+1 kg</td>
+            <td class="flex items-center justify-center gap-4">
+              <!-- Send Renewal Reminder -->
+              <button
+                class="bg-yellow-500 hover:bg-yellow-600 text-white p-2 rounded-lg shadow transition duration-200 mt-3 w-[35px] h-[35px]"
+                title="Send Renewal Reminder">
+                <i class='bx bx-bell'></i>
+              </button>
 
-    </main>
+              <!-- Send Bday Greeting -->
+              <button
+                class="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-lg shadow transition duration-200 mt-3 w-[35px] h-[35px]"
+                title="Send Birthday Greeting">
+                <i class='bx bx-gift'></i>
+              </button>
+
+              <!-- Extra Action (optional) -->
+              <button
+                class="bg-gray-500 hover:bg-gray-600 text-white p-2 rounded-lg shadow transition duration-200 mt-3 w-[35px] h-[35px]"
+                title="Other Action" onclick="loadPage('memberProfile')">
+                <i class='bx bx-dots-horizontal-rounded'></i>
+              </button>
+            </td>
+          </tr>
+
+          <tr class="hover:bg-slate-50 transition">
+            <td class="px-4 py-3">Carlos Tan</td>
+            <td class="px-4 py-3">789 Rizal Ave., Pasig</td>
+            <td class="px-4 py-3">1995-03-12</td>
+            <td class="px-4 py-3">09229887766</td>
+            <td class="px-4 py-3">carlos.tan@yahoo.com</td>
+            <td class="px-4 py-3">2024-03-01</td>
+            <td class="px-4 py-3">2024-06-01</td>
+            <td class="px-4 py-3">Summer Fit</td>
+            <td class="px-4 py-3 text-red-600 font-medium">Expired</td>
+            <td class="px-4 py-3">90 kg</td>
+            <td class="px-4 py-3">90 kg</td>
+            <td class="px-4 py-3 text-gray-500 font-semibold">0 kg</td>
+            <td class="px-4 py-3 flex items-center justify-center gap-4">
+              <!-- Send Renewal Reminder -->
+              <button
+                class="bg-yellow-500 hover:bg-yellow-600 text-white p-2 rounded-lg shadow transition duration-200 mt-3 w-[35px] h-[35px]"
+                title="Send Renewal Reminder">
+                <i class='bx bx-bell'></i>
+              </button>
+
+              <!-- Send Bday Greeting -->
+              <button
+                class="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-lg shadow transition duration-200 mt-3 w-[35px] h-[35px]"
+                title="Send Birthday Greeting">
+                <i class='bx bx-gift'></i>
+              </button>
+
+              <!-- Extra Action (optional) -->
+              <button
+                class="bg-gray-500 hover:bg-gray-600 text-white p-2 rounded-lg shadow transition duration-200 mt-3 w-[35px] h-[35px]"
+                title="Other Action" onclick="loadPage('memberProfile')">
+                <i class='bx bx-dots-horizontal-rounded'></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
   </div>
 
-</body>
 
-</html>
+  <div id="myModal"
+    class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 hidden overflow-y-auto">
+    <div class="bg-white rounded-lg shadow-lg w-full max-w-6xl p-8 relative">
+
+      <!-- ❌ Close Button -->
+      <button onclick="toggleModal('myModal')" class="absolute top-4 right-6 text-gray-500 hover:text-red-600 text-2xl">
+        &times;
+      </button>
+
+      <!-- 📝 Title -->
+      <h2 class="text-2xl font-bold text-slate-800 mb-6">Progress & Monitoring</h2>
+
+      <!-- 📅 Header Row -->
+      <div class="grid grid-cols-7 gap-4 font-semibold text-center text-slate-700 mb-2">
+        <div class="text-left">Metric</div>
+        <div>Date 1</div>
+        <div>Date 2</div>
+        <div>Date 3</div>
+        <div>Date 4</div>
+        <div>Date 5</div>
+        <div>Date 6</div>
+      </div>
+
+      <!-- 📏 Measurement Rows -->
+      <div class="space-y-3">
+        <!-- Use this structure for each row -->
+        <div class="grid grid-cols-7 gap-4 items-center">
+          <label class="text-left font-medium text-slate-600">Waist Circ:</label>
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+        </div>
+
+        <div class="grid grid-cols-7 gap-4 items-center">
+          <label class="text-left font-medium text-slate-600">Chest:</label>
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+        </div>
+
+        <div class="grid grid-cols-7 gap-4 items-center">
+          <label class="text-left font-medium text-slate-600">Arms/Biceps:</label>
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+        </div>
+
+        <div class="grid grid-cols-7 gap-4 items-center">
+          <label class="text-left font-medium text-slate-600">Legs:</label>
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+        </div>
+
+        <div class="grid grid-cols-7 gap-4 items-center">
+          <label class="text-left font-medium text-slate-600">Others:</label>
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+        </div>
+
+        <!-- 📊 Vitals -->
+        <div class="grid grid-cols-7 gap-4 items-center border-t pt-3 mt-3">
+          <label class="text-left font-medium text-slate-600">Weight:</label>
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+        </div>
+
+        <div class="grid grid-cols-7 gap-4 items-center">
+          <label class="text-left font-medium text-slate-600">BMI:</label>
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+        </div>
+
+        <div class="grid grid-cols-7 gap-4 items-center">
+          <label class="text-left font-medium text-slate-600">BP:</label>
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+        </div>
+
+        <div class="grid grid-cols-7 gap-4 items-center">
+          <label class="text-left font-medium text-slate-600">HR:</label>
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+        </div>
+
+        <div class="grid grid-cols-7 gap-4 items-center">
+          <label class="text-left font-medium text-slate-600">PR:</label>
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+          <input
+            class="border border-gray-300 rounded px-2 py-1 w-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="text">
+        </div>
+      </div>
+
+      <!-- 🔘 Buttons -->
+      <div class="mt-6 flex justify-end space-x-3">
+        <button onclick="toggleModal('myModal')" class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400">Cancel</button>
+        <button class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">Save</button>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<script>
+  function toggleModal(id) {
+    const modal = document.getElementById(id);
+    if (modal.classList.contains('hidden')) {
+      modal.classList.remove('hidden');
+    } else {
+      modal.classList.add('hidden');
+    }
+  }
+</script>

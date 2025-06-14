@@ -1,0 +1,476 @@
+<main class="flex-1 overflow-y-auto p-4 bg-slate-100">
+    <header class="text-center bg-white p-4 shadow rounded-md mb-6">
+        <h1 class="uppercase font-semibold text-slate-700 text-lg tracking-wide">
+            Member's Profile
+        </h1>
+    </header>
+
+
+    <div class="bg-white rounded-lg shadow overflow-x-auto">
+        <form class="p-6 space-y-6">
+            <!-- Profile Picture Upload -->
+            <div class="flex items-center space-x-4">
+                <img class="w-20 h-20 rounded-full object-cover ring-2 ring-indigo-500"
+                    src="https://via.placeholder.com/150" alt="Profile Picture">
+                <div>
+                    <label class="block text-sm font-medium text-slate-700">Upload Photo</label>
+                    <input type="file"
+                        class="mt-1 text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-indigo-50 file:text-indigo-600 hover:file:bg-indigo-100" />
+                </div>
+            </div>
+
+            <!-- Full Name & Nickname -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-sm font-medium text-slate-700">Full Name</label>
+                    <input type="text" placeholder="e.g. John Doe"
+                        class="mt-1 w-full px-4 py-2 border rounded-md shadow-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none" />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-slate-700">Nickname</label>
+                    <input type="text" placeholder="e.g. JD"
+                        class="mt-1 w-full px-4 py-2 border rounded-md shadow-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none" />
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-sm font-medium text-slate-700">Contact Number</label>
+                    <input type="text" placeholder="e.g. 0917xxxxxxx"
+                        class="mt-1 w-full px-4 py-2 border rounded-md shadow-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none" />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-slate-700">Email Address</label>
+                    <input type="email" placeholder="e.g. john@example.com"
+                        class="mt-1 w-full px-4 py-2 border rounded-md shadow-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none" />
+                </div>
+            </div>
+
+            <!-- Social Media -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-sm font-medium text-slate-700">Facebook</label>
+                    <input type="text" placeholder="Facebook profile link"
+                        class="mt-1 w-full px-4 py-2 border rounded-md shadow-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none" />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-slate-700">Other Social Media</label>
+                    <input type="text" placeholder="e.g. Instagram, Twitter"
+                        class="mt-1 w-full px-4 py-2 border rounded-md shadow-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none" />
+                </div>
+            </div>
+
+            <!-- Birthdate & Age -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-sm font-medium text-slate-700">Birthdate</label>
+                    <input type="date"
+                        class="mt-1 w-full px-4 py-2 border rounded-md shadow-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none" />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-slate-700">Age</label>
+                    <input type="number" placeholder="e.g. 30"
+                        class="mt-1 w-full px-4 py-2 border rounded-md shadow-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none" />
+                </div>
+            </div>
+
+            <!-- Address -->
+            <div>
+                <label class="block text-sm font-medium text-slate-700">Address</label>
+                <textarea placeholder="Street, Barangay, City" rows="3"
+                    class="mt-1 w-full px-4 py-2 border rounded-md shadow-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="text-right">
+                <button type="submit"
+                    class="bg-indigo-600 text-white px-6 py-2 rounded-lg shadow hover:bg-indigo-700 transition">
+                    Save Profile
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <div class="text-center mt-3">
+        <p class="font-semibold small">Emergency Contact Information</p>
+    </div>
+
+    <div class="bg-white rounded-lg shadow overflow-x-auto">
+        <form class="p-6 space-y-6 text-slate-700">
+
+            <!-- 🆘 Emergency Contact Info -->
+            <div>
+                <h2 class="text-lg font-semibold mb-4 text-indigo-700">Emergency Contact Information</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium">Name</label>
+                        <input type="text" placeholder="e.g. Jane Doe"
+                            class="mt-1 w-full px-4 py-2 border rounded-md shadow-sm focus:ring-indigo-500 focus:ring-2 focus:outline-none" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium">Contact Number</label>
+                        <input type="text" placeholder="e.g. 0917xxxxxxx"
+                            class="mt-1 w-full px-4 py-2 border rounded-md shadow-sm focus:ring-indigo-500 focus:ring-2 focus:outline-none" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium">Relation</label>
+                        <input type="text" placeholder="e.g. Sister"
+                            class="mt-1 w-full px-4 py-2 border rounded-md shadow-sm focus:ring-indigo-500 focus:ring-2 focus:outline-none" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- 🏥 Health Information -->
+            <div>
+                <h2 class="text-lg font-semibold mb-4 text-indigo-700">Health Information</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium">Any Health Condition?</label>
+                        <input type="text" placeholder="e.g. Hypertension"
+                            class="mt-1 w-full px-4 py-2 border rounded-md shadow-sm focus:ring-indigo-500 focus:ring-2 focus:outline-none" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium">Allergies</label>
+                        <input type="text" placeholder="e.g. Pollen, Seafood"
+                            class="mt-1 w-full px-4 py-2 border rounded-md shadow-sm focus:ring-indigo-500 focus:ring-2 focus:outline-none" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium">Blood Type</label>
+                        <input type="text" placeholder="e.g. O+"
+                            class="mt-1 w-full px-4 py-2 border rounded-md shadow-sm focus:ring-indigo-500 focus:ring-2 focus:outline-none" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium">Blood Pressure</label>
+                        <input type="text" placeholder="e.g. 120/80"
+                            class="mt-1 w-full px-4 py-2 border rounded-md shadow-sm focus:ring-indigo-500 focus:ring-2 focus:outline-none" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium">Waist Circumference (cm)</label>
+                        <input type="text" placeholder="e.g. 85"
+                            class="mt-1 w-full px-4 py-2 border rounded-md shadow-sm focus:ring-indigo-500 focus:ring-2 focus:outline-none" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium">Height (cm)</label>
+                        <input type="text" placeholder="e.g. 170"
+                            class="mt-1 w-full px-4 py-2 border rounded-md shadow-sm focus:ring-indigo-500 focus:ring-2 focus:outline-none" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium">Weight (kg)</label>
+                        <input type="text" placeholder="e.g. 65"
+                            class="mt-1 w-full px-4 py-2 border rounded-md shadow-sm focus:ring-indigo-500 focus:ring-2 focus:outline-none" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium">BMI</label>
+                        <input type="text" placeholder="e.g. 22.5"
+                            class="mt-1 w-full px-4 py-2 border rounded-md shadow-sm focus:ring-indigo-500 focus:ring-2 focus:outline-none" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium">Blood Sugar</label>
+                        <input type="text" placeholder="e.g. 90 mg/dL"
+                            class="mt-1 w-full px-4 py-2 border rounded-md shadow-sm focus:ring-indigo-500 focus:ring-2 focus:outline-none" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium">Cholesterol</label>
+                        <input type="text" placeholder="e.g. 180 mg/dL"
+                            class="mt-1 w-full px-4 py-2 border rounded-md shadow-sm focus:ring-indigo-500 focus:ring-2 focus:outline-none" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium">Uric Acid</label>
+                        <input type="text" placeholder="e.g. 5.5 mg/dL"
+                            class="mt-1 w-full px-4 py-2 border rounded-md shadow-sm focus:ring-indigo-500 focus:ring-2 focus:outline-none" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- 💳 Membership Details -->
+            <div>
+                <h2 class="text-lg font-semibold mb-4 text-indigo-700">Membership Details</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium">Membership</label>
+                        <input type="text" placeholder="e.g. Gold, Monthly"
+                            class="mt-1 w-full px-4 py-2 border rounded-md shadow-sm focus:ring-indigo-500 focus:ring-2 focus:outline-none" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium">Date Started</label>
+                        <input type="date"
+                            class="mt-1 w-full px-4 py-2 border rounded-md shadow-sm focus:ring-indigo-500 focus:ring-2 focus:outline-none" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- 💰 Payments -->
+            <div>
+                <h2 class="text-lg font-semibold mb-4 text-indigo-700">Payments</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium">Date</label>
+                        <input type="date"
+                            class="mt-1 w-full px-4 py-2 border rounded-md shadow-sm focus:ring-indigo-500 focus:ring-2 focus:outline-none" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium">Amount</label>
+                        <input type="number" placeholder="e.g. 500"
+                            class="mt-1 w-full px-4 py-2 border rounded-md shadow-sm focus:ring-indigo-500 focus:ring-2 focus:outline-none" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium">Particulars</label>
+                        <input type="text" placeholder="e.g. Monthly Fee"
+                            class="mt-1 w-full px-4 py-2 border rounded-md shadow-sm focus:ring-indigo-500 focus:ring-2 focus:outline-none" />
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <label class="block text-sm font-medium">Remarks</label>
+                    <textarea rows="2" placeholder="Optional notes..."
+                        class="mt-1 w-full px-4 py-2 border rounded-md shadow-sm focus:ring-indigo-500 focus:ring-2 focus:outline-none"></textarea>
+                </div>
+            </div>
+
+            <!-- ✅ Save Button -->
+            <div class="text-right pt-4">
+                <button type="submit"
+                    class="bg-indigo-600 text-white px-6 py-2 rounded-lg shadow hover:bg-indigo-700 transition">
+                    Save Info
+                </button>
+            </div>
+        </form>
+
+    </div>
+
+
+    <div class="bg-white rounded-lg shadow overflow-x-auto mt-4">
+        <div class="bg-white rounded-lg shadow overflow-x-auto p-6 text-slate-700 space-y-6">
+            <h2 class="text-lg font-semibold text-indigo-700 mb-4">Fitness / Workout Program</h2>
+
+            <!-- Fitness Goals -->
+            <div class="space-y-3">
+                <label class="block text-sm font-medium">Fitness Goals</label>
+                <input type="text" placeholder="Goal 1"
+                    class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                <input type="text" placeholder="Goal 2"
+                    class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                <input type="text" placeholder="Goal 3"
+                    class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+            </div>
+
+            <!-- Timeline Label -->
+            <div class="pt-4">
+                <label class="block text-sm font-medium text-gray-500">Timeline / Date</label>
+            </div>
+
+            <!-- Weekly Program with Activities -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
+                <!-- Left: Weekly Inputs -->
+                <div class="space-y-6">
+                    <label class="block text-sm font-medium mb-1">Weekly Breakdown</label>
+
+                    <!-- Repeat this block per week -->
+                    <div>
+                        <p class="text-sm font-semibold text-slate-600 mb-2">Week 1</p>
+                        <div class="space-y-2">
+                            <input type="text" placeholder="Day 1"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Day 2"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Day 3"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Day 4"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Day 5"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-sm font-semibold text-slate-600 mb-2">Week 2</p>
+                        <div class="space-y-2">
+                            <input type="text" placeholder="Day 1"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Day 2"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Day 3"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Day 4"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Day 5"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-sm font-semibold text-slate-600 mb-2">Week 3</p>
+                        <div class="space-y-2">
+                            <input type="text" placeholder="Day 1"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Day 2"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Day 3"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Day 4"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Day 5"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-sm font-semibold text-slate-600 mb-2">Week 4</p>
+                        <div class="space-y-2">
+                            <input type="text" placeholder="Day 1"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Day 2"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Day 3"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Day 4"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Day 5"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-sm font-semibold text-slate-600 mb-2">Week 5</p>
+                        <div class="space-y-2">
+                            <input type="text" placeholder="Day 1"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Day 2"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Day 3"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Day 4"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Day 5"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-sm font-semibold text-slate-600 mb-2">Week 6</p>
+                        <div class="space-y-2">
+                            <input type="text" placeholder="Day 1"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Day 2"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Day 3"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Day 4"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Day 5"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                        </div>
+                    </div>
+
+
+
+                    <!-- You can copy/paste the block above and just change to "Week 2", etc. -->
+                </div>
+
+                <!-- Right: Activities -->
+                <div class="space-y-6">
+                    <label class="block text-sm font-medium mb-1">Program / Activities</label>
+
+                    <div>
+                        <p class="text-sm font-semibold text-slate-600 mb-2">Week 1 Activities</p>
+                        <div class="space-y-2">
+                            <input type="text" placeholder="Activity 1"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Activity 2"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Activity 3"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Activity 4"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Activity 5"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-sm font-semibold text-slate-600 mb-2">Week 2 Activities</p>
+                        <div class="space-y-2">
+                            <input type="text" placeholder="Activity 1"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Activity 2"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Activity 3"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Activity 4"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Activity 5"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-sm font-semibold text-slate-600 mb-2">Week 3 Activities</p>
+                        <div class="space-y-2">
+                            <input type="text" placeholder="Activity 1"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Activity 2"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Activity 3"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Activity 4"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Activity 5"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-sm font-semibold text-slate-600 mb-2">Week 4 Activities</p>
+                        <div class="space-y-2">
+                            <input type="text" placeholder="Activity 1"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Activity 2"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Activity 3"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Activity 4"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Activity 5"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-sm font-semibold text-slate-600 mb-2">Week 5 Activities</p>
+                        <div class="space-y-2">
+                            <input type="text" placeholder="Activity 1"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Activity 2"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Activity 3"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Activity 4"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Activity 5"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-sm font-semibold text-slate-600 mb-2">Week 6 Activities</p>
+                        <div class="space-y-2">
+                            <input type="text" placeholder="Activity 1"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Activity 2"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Activity 3"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Activity 4"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                            <input type="text" placeholder="Activity 5"
+                                class="w-full border-b border-black bg-transparent px-2 py-1 focus:outline-none" />
+                        </div>
+                    </div>
+
+                    <!-- Copy this block for Week 2 Activities, Week 3, etc. -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
