@@ -62,25 +62,30 @@
             <td class="px-4 py-3 text-emerald-600 font-semibold">-6 kg</td>
             <td class="flex items-center justify-center gap-4">
               <!-- Send Renewal Reminder -->
-              <button
-                class="bg-yellow-500 hover:bg-yellow-600 text-white p-2 rounded-lg shadow transition duration-200 mt-3 w-[35px] h-[35px]"
-                title="Send Renewal Reminder">
-                <i class='bx bx-bell'></i>
-              </button>
+              <!-- Send Renewal Reminder -->
+            <button
+              onclick="event.stopPropagation();"
+              class="bg-yellow-500 hover:bg-yellow-600 text-white p-2 rounded-lg shadow transition duration-200 mt-3 w-[35px] h-[35px]"
+              title="Send Renewal Reminder">
+              <i class='bx bx-bell'></i>
+            </button>
 
-              <!-- Send Bday Greeting -->
-              <button
-                class="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-lg shadow transition duration-200 mt-3 w-[35px] h-[35px]"
-                title="Send Birthday Greeting">
-                <i class='bx bx-gift'></i>
-              </button>
+            <!-- Send Bday Greeting -->
+            <button
+              onclick="event.stopPropagation();"
+              class="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-lg shadow transition duration-200 mt-3 w-[35px] h-[35px]"
+              title="Send Birthday Greeting">
+              <i class='bx bx-gift'></i>
+            </button>
 
-              <!-- Extra Action (optional) -->
-              <button
-                class="bg-gray-500 hover:bg-gray-600 text-white p-2 rounded-lg shadow transition duration-200 mt-3 w-[35px] h-[35px]"
-                title="Other Action" onclick="loadPage('memberProfile')">
-                <i class='bx bx-dots-horizontal-rounded'></i>
-              </button>
+            <!-- Extra Action -->
+            <button
+              onclick="event.stopPropagation(); loadPage('memberProfile');"
+              class="bg-gray-500 hover:bg-gray-600 text-white p-2 rounded-lg shadow transition duration-200 mt-3 w-[35px] h-[35px]"
+              title="Other Action">
+              <i class='bx bx-dots-horizontal-rounded'></i>
+            </button>
+
             </td>
 
 
@@ -139,24 +144,27 @@
             <td class="px-4 py-3 flex items-center justify-center gap-4">
               <!-- Send Renewal Reminder -->
               <button
-                class="bg-yellow-500 hover:bg-yellow-600 text-white p-2 rounded-lg shadow transition duration-200 mt-3 w-[35px] h-[35px]"
-                title="Send Renewal Reminder">
-                <i class='bx bx-bell'></i>
-              </button>
+              onclick="event.stopPropagation();"
+              class="bg-yellow-500 hover:bg-yellow-600 text-white p-2 rounded-lg shadow transition duration-200 mt-3 w-[35px] h-[35px]"
+              title="Send Renewal Reminder">
+              <i class='bx bx-bell'></i>
+            </button>
 
-              <!-- Send Bday Greeting -->
-              <button
-                class="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-lg shadow transition duration-200 mt-3 w-[35px] h-[35px]"
-                title="Send Birthday Greeting">
-                <i class='bx bx-gift'></i>
-              </button>
+            <!-- Send Bday Greeting -->
+            <button
+              onclick="event.stopPropagation();"
+              class="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-lg shadow transition duration-200 mt-3 w-[35px] h-[35px]"
+              title="Send Birthday Greeting">
+              <i class='bx bx-gift'></i>
+            </button>
 
-              <!-- Extra Action (optional) -->
-              <button
-                class="bg-gray-500 hover:bg-gray-600 text-white p-2 rounded-lg shadow transition duration-200 mt-3 w-[35px] h-[35px]"
-                title="Other Action" onclick="loadPage('memberProfile')">
-                <i class='bx bx-dots-horizontal-rounded'></i>
-              </button>
+            <!-- Extra Action -->
+            <button
+              onclick="event.stopPropagation(); loadPage('memberProfile');"
+              class="bg-gray-500 hover:bg-gray-600 text-white p-2 rounded-lg shadow transition duration-200 mt-3 w-[35px] h-[35px]"
+              title="Other Action">
+              <i class='bx bx-dots-horizontal-rounded'></i>
+            </button>
             </td>
           </tr>
         </tbody>
